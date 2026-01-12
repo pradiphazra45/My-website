@@ -82,9 +82,11 @@ nav.navbar.navbar-expand-lg.navbar-light.fixed-top.bg-white {
     background: linear-gradient(180deg, #032E15 0%, #016630 100%);
     border-radius: 505.644px;
 }
-.btn-success:hover{
+
+.btn-success:hover {
     box-shadow: 0px 1px 11px 4px rgb(0 0 0 / 14%);
 }
+
 .btn-search {
     border: 0;
     background: transparent;
@@ -156,7 +158,7 @@ nav.navbar.navbar-expand-lg.navbar-light.fixed-top.bg-white {
 }
 
 .thumb.active {
-    border:1px solid  #198754;
+    border: 1px solid #198754;
 }
 
 .subscription-header {
@@ -384,9 +386,11 @@ span.badge.bg-success.position-absolute.top-0 {
 
 
 }
+
 .font-700 {
     font-weight: 700 !important;
 }
+
 .included-card {
     border: 1px solid #919798;
     border-radius: 6px;
@@ -455,15 +459,17 @@ span.badge.bg-success.position-absolute.top-0 {
     background-repeat: no-repeat;
 
 }
+
 #productMainSlider.owl-theme .owl-nav [class*=owl-]:hover {
     background-color: transparent;
 }
+
 .owl-nav .owl-prev {
     transform: rotate(180deg);
 }
 
 #productMainSlider .owl-nav span,
- #productMainSlider .owl-prev span {
+#productMainSlider .owl-prev span {
     opacity: 0;
 
 }
@@ -651,81 +657,143 @@ th.text-start {
         width: 100%;
         font-size: 15px;
     }
+
     .bold-text-big {
         margin: 0 15px;
         font-size: 30px;
     }
+
     .fw-bold {
         font-size: 40px;
         letter-spacing: normal;
     }
+
     .thumb {
         height: auto;
     }
+
     .owl-carousel#productMainSlider .owl-stage .item {
         height: 400px;
     }
+
     .fixed-top {
         padding-right: 46px;
         border-bottom: 1px solid #032e151f;
     }
+
     .btn-success {
         zoom: 0.7;
     }
+
     .collection .row.align-items-center.g-5 {
         margin: 0;
     }
-   
+
     .banner-area {
         min-height: 650px;
         padding-top: 100px;
     }
+
     .banner-bg-text {
         width: auto;
         padding-right: 9px;
         font-size: 13px;
     }
+
     .subscription-head input[type="radio"] {
         top: 6px;
         margin-right: 3px;
         cursor: pointer;
     }
+
     .subscription-head strong {
         font-size: 13px;
     }
+
     .owl-dots {
-        top:-5px;
+        top: -5px;
     }
 
-
-}
-
-@media only screen and (max-width: 991px) {
-     button.navbar-toggler {
+    button.navbar-toggler {
         position: absolute;
         right: 15px;
         padding: 2px;
         zoom: 0.8;
     }
-    i.bi.bi-x.d-lg-none.d-block.close-menu{
-    font-size: 40px;
-    position: absolute;
-    right: 11px;
-    top: 0;
-}
-   .navbar-collapse {
-    position: fixed;
-    background: #fff;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    height: 100vh;
-    padding: 15px;
-}
-.navbar.fixed-top {
+
+    i.bi.bi-x.d-lg-none.d-block.close-menu {
+        font-size: 40px;
+        position: absolute;
+        right: 11px;
+        top: 0;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        background: #fff;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100vh;
+        padding: 15px;
+    }
+
+    .navbar.fixed-top {
         padding-right: 46px;
         border-bottom: 1px solid #032e151f;
     }
+.banner-bg-text{
+    margin: 10px auto ;
+}
+.d-flex.mb-4{
+    justify-content: center;
+}
 
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+.first-box-30 .included-card-img-box {
+    width: 69px;
+}
+.gap-5 {
+    gap: 1rem !important;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 15px;
+        padding: 2px;
+        zoom: 0.8;
+    }
+
+    i.bi.bi-x.d-lg-none.d-block.close-menu {
+        font-size: 40px;
+        position: absolute;
+        right: 11px;
+        top: 0;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        background: #fff;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100vh;
+        padding: 15px;
+    }
+
+    .navbar.fixed-top {
+        padding-right: 46px;
+        border-bottom: 1px solid #032e151f;
+    }
+.banner-bg-text{
+    margin: 10px auto ;
+}
+.d-flex.mb-4{
+    justify-content: center;
+}
 }
