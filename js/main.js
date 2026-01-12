@@ -30,36 +30,74 @@ $(document).ready(function () {
         $("#productThumbs .thumb").eq(index).addClass("active");
     });
 
-    const counters = document.querySelectorAll('.counter-number');
-    let started = false;
+    // const counters = document.querySelectorAll('.counter-number');
+    // let started = false;
 
-    const startCounter = () => {
-        counters.forEach(counter => {
-            const target = +counter.dataset.target;
-            let count = 0;
+    // const startCounter = () => {
+    //     counters.forEach(counter => {
+    //         const target = +counter.dataset.target;
+    //         let count = 0;
 
-            const update = () => {
-                count++;
-                counter.textContent = count + '%';
-                if (count < target) {
-                    requestAnimationFrame(update);
-                }
-            };
+    //         const update = () => {
+    //             count++;
+    //             counter.textContent = count + '%';
+    //             if (count < target) {
+    //                 requestAnimationFrame(update);
+    //             }
+    //         };
 
-            update();
-        });
+    //         update();
+    //     });
+    // };
+
+    // const observer = new IntersectionObserver(entries => {
+    //     if (entries[0].isIntersecting && !started) {
+    //         started = true;
+    //         startCounter();
+    //     }
+    // }, {
+    //     threshold: 1
+    // });
+
+    // observer.observe(document.getElementById('counterSection'));
+
+const counters = document.querySelectorAll('.counter-number');
+let started = false;
+
+const startCounter = () => {
+  counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    let count = 0;
+    const duration = 3000; // total animation time in ms (2 seconds)
+    const startTime = performance.now();
+
+    const update = (currentTime) => {
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      count = Math.floor(progress * target);
+      counter.textContent = count + '%';
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
     };
 
-    const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting && !started) {
-            started = true;
-            startCounter();
-        }
-    }, {
-        threshold: 0.4
-    });
+    requestAnimationFrame(update);
+  });
+};
 
-    observer.observe(document.getElementById('counterSection'));
+const observer = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting && !started) {
+    started = true;
+    startCounter();
+  }
+}, {
+  threshold: 1
+});
+
+observer.observe(document.getElementById('counterSection'));
+
+
+
     ///add class header on scroll
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 80) {
