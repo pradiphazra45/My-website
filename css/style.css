@@ -18,7 +18,7 @@ body {
 img {
     max-width: 100%;
 }
-
+/*****header***/
 .nav-link {
     font-family: 'Inter';
     font-style: normal;
@@ -42,8 +42,55 @@ a.navbar-brand {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+}
+/* Arrow icon */
+.dropdown-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+  position: relative;
+    top: -2px;
+}
 
+/* Rotate arrow on hover */
+.hover-dropdown:hover .dropdown-arrow {
+  transform: rotate(-135deg);
+}
 
+/* Existing hover dropdown styles */
+.hover-dropdown {
+  position: relative;
+}
+
+.hover-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+}
+
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Mobile safety */
+@media (max-width: 991px) {
+  .hover-dropdown:hover .dropdown-menu {
+    display: none;
+  }
 }
 
 .section-headding {
@@ -84,7 +131,7 @@ nav.navbar.navbar-expand-lg.navbar-light.fixed-top.bg-white {
 }
 
 .btn-success:hover {
-    box-shadow: 0px 1px 11px 4px rgb(0 0 0 / 14%);
+    box-shadow: 0px 1px 11px 4px rgb(0 0 0 / 30%);
 }
 
 .btn-search {
