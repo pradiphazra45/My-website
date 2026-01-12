@@ -88,9 +88,11 @@ a.navbar-brand {
 
 /* Mobile safety */
 @media (max-width: 991px) {
+ .nav-link .dropdown-arrow,
   .hover-dropdown:hover .dropdown-menu {
     display: none;
   }
+
 }
 
 .section-headding {
